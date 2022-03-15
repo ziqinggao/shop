@@ -1,0 +1,96 @@
+ul {
+	padding: 0;
+}
+.tm-m-photos,  .tm-m-photos-thumb {
+	zoom: 1;
+}
+.tm-m-photos-thumb {
+	margin: 10px 0;
+	list-style-type: none;
+	height: 45px;
+}
+.tm-m-photos-thumb li {
+	float: left;
+	border: 2px solid #f2f2f2;
+	padding: 2px;
+	margin-right: 8px;
+	position: relative;
+	transition: border-color .2s ease-out;
+}
+.tm-m-photos-thumb .tm-current {
+	border: 2px solid #f23d6a;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	cursor: auto;
+}
+
+.tm-photos-arrow {
+	width: 0;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	border: 6px dashed transparent;
+	border-top: 6px solid #f23d6a;
+	position: absolute;
+	left: 15px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	bottom: -12px;
+	background: 0 0;
+}
+.tm-current .tm-photos-arrow {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+.tm-m-photos-thumb img {
+	display: block;
+	width: 40px;
+	height: 40px;
+	cursor: url(../img/T1nTBDFCRbXXbzTk_b-25-20.png), url(http://assets.alicdn.com/img/common/zoom_in.cur), auto;
+}
+.tm-m-photo-viewer, .tm-m-photo-viewer img,  .tm-m-photos-thumb .tm-current img {
+	cursor: url(../img/T1oq4AFupvXXcu5FDa-20-20.png), url(http://assets.alicdn.com/img/common/zoom_out.cur), auto;
+}
+.tm-m-photo-viewer {
+	position: relative;
+	margin: 10px 0;
+	width: 0;
+	height: 0;
+	border: 1px solid #ccc;
+	background: #fff;
+	padding: 2px;
+	overflow: hidden;
+	display: none;
+	transition: all 0.2s ease-in;
+}
+.tm-m-photo-viewer-navleft,  .tm-m-photo-viewer-navright {
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	width: 30%;
+	background: url(http://assets.alicdn.com/s.gif); /*解决IE 下背景透明的空白元素无法触发 click 和 hover 事件*/
+}
+.tm-m-photo-viewer-navleft {
+	left: 0;
+}
+.tm-m-photo-viewer-navright {
+	right: 0;
+}
+.tm-m-photo-viewer-navleft i,  .tm-m-photo-viewer-navright i{
+	top: 50%;
+	margin-top:-24px;
+	position: absolute;
+	width: 48px;
+	height: 48px;
+	display: none;
+}
+.tm-m-photo-viewer-navleft i{
+	left: 0;
+	background-image: url(../img/arrow-l.png);
+}
+.tm-m-photo-viewer-navright i{
+	right: 0;
+	background-image: url(../img/arrow-r.png);
+}
